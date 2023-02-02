@@ -55,4 +55,7 @@
     <defaultSettings>0</defaultSettings>
     <selectedTab>0</selectedTab>
   </Table1>
+  <Table2>
+    <QueryColumn>SELECT Correo FROM Emails WHERE Area = 'Producción' AND Nivel = 1;</QueryColumn>
+  </Table2>
 </NewDataSet>
