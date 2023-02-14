@@ -55,6 +55,24 @@
     <defaultSettings>0</defaultSettings>
     <selectedTab>0</selectedTab>
   </Table1>
+  <Table1>
+    <TableName>ALARMS</TableName>
+    <IsFilter>False</IsFilter>
+    <Filter />
+    <IsScope>False</IsScope>
+    <ScopeLow />
+    <ScopeHigh />
+    <IndexName />
+    <FieldsOrder>0</FieldsOrder>
+    <IsFTS>False</IsFTS>
+    <ftsField />
+    <ftsPattern />
+    <recNo>0</recNo>
+    <findExpression />
+    <evalTest />
+    <defaultSettings>0</defaultSettings>
+    <selectedTab>0</selectedTab>
+  </Table1>
   <Table2>
     <QueryColumn>SELECT Correo FROM Emails WHERE Area = 'Producción' AND Nivel = 1;</QueryColumn>
   </Table2>
