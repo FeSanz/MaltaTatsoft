@@ -38,24 +38,6 @@
     </xs:element>
   </xs:schema>
   <Table1>
-    <TableName>FAILURES</TableName>
-    <IsFilter>False</IsFilter>
-    <Filter />
-    <IsScope>False</IsScope>
-    <ScopeLow />
-    <ScopeHigh />
-    <IndexName />
-    <FieldsOrder>0</FieldsOrder>
-    <IsFTS>False</IsFTS>
-    <ftsField />
-    <ftsPattern />
-    <recNo>0</recNo>
-    <findExpression />
-    <evalTest />
-    <defaultSettings>0</defaultSettings>
-    <selectedTab>0</selectedTab>
-  </Table1>
-  <Table1>
     <TableName>EMAILS</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
@@ -127,6 +109,124 @@
     <defaultSettings>0</defaultSettings>
     <selectedTab>0</selectedTab>
   </Table1>
+  <Table1>
+    <TableName>FAILURES</TableName>
+    <IsFilter>False</IsFilter>
+    <Filter />
+    <IsScope>False</IsScope>
+    <ScopeLow />
+    <ScopeHigh />
+    <IndexName />
+    <FieldsOrder>0</FieldsOrder>
+    <IsFTS>False</IsFTS>
+    <ftsField />
+    <ftsPattern />
+    <recNo>0</recNo>
+    <findExpression />
+    <evalTest />
+    <defaultSettings>0</defaultSettings>
+    <selectedTab>0</selectedTab>
+  </Table1>
+  <Table2>
+    <QueryColumn>INSERT INTO Failures(Ide,Nombre,Area) VALUES (1,'Limpieza de maquinaria',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (2,'16.1 Cambio de pistones',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (3,'16.2 Cambio de rodamientos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (4,'16.3 Cambio de bandas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (5,'21.1 Exceso de tiempo de mtto',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (6,'21.2 Maquinaria/equipos sin refacci�n',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (7,'Cambio de equipo da�ado',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (8,'24.1 Ajuste en cosedora',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (9,'24.2 Atascamiento de sacos entre bandas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (10,'24.3 Falla de paletizado',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (11,'24.4 Falla de alimentador de tarimas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (12,'24.5 Falla de alimentador de saco vac�o',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (13,'24.6 Fallo de apertura de boca',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (14,'24.7 Fallo de llenado de saco',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (15,'24.8 falla de banda alimentadora',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (16,'24.9 Falla de etiquetadora',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (17,'24.10 Falla de cosedora',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (18,'24.11 Falla de volteador de sacos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (19,'24.12 Falla de bandas de extracci�n de saco',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (20,'24.13 Falla de checkwayer',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (21,'24.14 Falla de detector de metales',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (22,'24.15 Falla de impresora laser(Injet)',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (23,'24.16 Falla de banda basculante',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (24,'24.17 Falla de banda inclinada',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (25,'24.18 Falla de banda gravitarorio',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (26,'24.19 Falla de conformador de sacos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (27,'24.20 Falla de Girador de sacos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (28,'24.21 Falla de banda de posici�n',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (29,'24.22 Falla de banda conformadora de camas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (30,'24.23 Falla de desplazador de sacos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (31,'24.24 Falla de conformador de camas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (32,'24.25 Falla de compuerta de paletizado',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (33,'24.26 Falla de referenciador de pallet',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (34,'24.27 Falla de rodillos motorizados',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (35,'24.27 Falla de sensores',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (36,'25.1 Tolva de alimentaci�n',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (37,'25.2 Compuertas de tolvas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (38,'25.3 Sensores de nivel',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (39,'25.4 Falla de distribuidor',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (40,'25.5 Falla de aplicador de melaza',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (41,'25.6 Falla de distribuidor',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (42,'25.7 Falla de elevador de cangilones harinas',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (43,'25.8 Falla de elevador de cangilones Pellet',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (44,'25.9 Falla de v�lvula diversora',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (45,'25.10 Falla de sensores',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (46,'26.1 No permite selecci�n de receta',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (47,'26.2 No hay sincronizaci�n de equipos',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (48,'26.3 Error de comunicaci�n equipos de flujo',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (49,'Falta de aire comprimido',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (50,'Falla energ�a el�ctrica',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (51,'11.1 Mtto planeado',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (52,'11.2 Revisi�n de puntos TPM',1);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (101,'19.1 Inv. ciclico',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (102,'Inv. f�sico',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (103,'Falta de melaza',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (104,'falta de empaque',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (105,'falta de tarimas',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (106,'falta de hilo',2);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (201,'13.1 Cambio de hilo',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (202,'13.2 Cambio de aguja',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (203,'13.3 Cambio de Producto',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (204,'13.4 Cambio de saco',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (205,'13.5 Setup',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (206,'14.1 Capacitaci�n',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (207,'14.2 Horario de comida',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (208,'14.3 Platica de Producci�n',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (209,'14.4 Platicad e RH',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (210,'14.5 Platica de Seguridad e Higiene',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (211,'15.1 Arranque inicial',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (212,'15.2 Arranque x Paro obligado',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (213,'17.1 Pruebas de Ing',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (214,'17.2 Integraci�n de eq. nuevos',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (215,'18.1 Movimientos de equipos',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (216,'Prueba de materiales',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (217,'Pruebas de procesos nuevo',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (218,'Pruebas de produccion nuevo',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (219,'Ajustes extraordinarios durante cambios',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (220,'Tiempo excedido en cambio de SKu',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (221,'tiempo excedido en cambio de empaque',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (222,'33.1 Ausentismo',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (223,'33.2 Personal para actividad programada',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (224,'34.1 Ajustes al proceso de ensacado',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (225,'34.2 Ajustes al proceso de etiquetad',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (226,'Ajustes al proc. de cocido',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (227,'Ajustes a las bandas de extracci�n',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (228,'Ajustes al girador de sacos',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (229,'Ajustes al checkwayer',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (230,'35.1 Activaci�n de alarma de emergencia',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (231,'35.2 Simulacro',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (232,'Proceso de carga detenido x sobreproducci�n',3);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (301,'personal nuevo',4);
+INSERT INTO Failures(Ide,Nombre,Area) VALUES (302,'equipo',4);</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>DELETE * FROM Failures</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>SELECT Nombre FROM Failures WHERE Ide = 5</QueryColumn>
+  </Table2>
   <Table2>
     <QueryColumn>INSERT INTO Failures(Ide,Nombre,Area) VALUES (1,'Limpieza de maquinaria',1);
 INSERT INTO Failures(Ide,Nombre,Area) VALUES (2,'16.1 Cambio de pistones',1);
