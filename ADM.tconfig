@@ -38,7 +38,7 @@
     </xs:element>
   </xs:schema>
   <Table1>
-    <TableName>EMAILS</TableName>
+    <TableName>FAILURES</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
     <IsScope>False</IsScope>
@@ -56,6 +56,24 @@
     <selectedTab>0</selectedTab>
   </Table1>
   <Table1>
+    <TableName>EMAILS</TableName>
+    <IsFilter>False</IsFilter>
+    <Filter />
+    <IsScope>False</IsScope>
+    <ScopeLow />
+    <ScopeHigh />
+    <IndexName />
+    <FieldsOrder>0</FieldsOrder>
+    <IsFTS>False</IsFTS>
+    <ftsField />
+    <ftsPattern />
+    <recNo>20</recNo>
+    <findExpression />
+    <evalTest />
+    <defaultSettings>0</defaultSettings>
+    <selectedTab>0</selectedTab>
+  </Table1>
+  <Table1>
     <TableName>ALERTS</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
@@ -67,7 +85,7 @@
     <IsFTS>False</IsFTS>
     <ftsField />
     <ftsPattern />
-    <recNo>0</recNo>
+    <recNo>21</recNo>
     <findExpression />
     <evalTest />
     <defaultSettings>0</defaultSettings>
@@ -93,24 +111,6 @@
   </Table1>
   <Table1>
     <TableName>ALARMS</TableName>
-    <IsFilter>False</IsFilter>
-    <Filter />
-    <IsScope>False</IsScope>
-    <ScopeLow />
-    <ScopeHigh />
-    <IndexName />
-    <FieldsOrder>0</FieldsOrder>
-    <IsFTS>False</IsFTS>
-    <ftsField />
-    <ftsPattern />
-    <recNo>0</recNo>
-    <findExpression />
-    <evalTest />
-    <defaultSettings>0</defaultSettings>
-    <selectedTab>0</selectedTab>
-  </Table1>
-  <Table1>
-    <TableName>FAILURES</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
     <IsScope>False</IsScope>
