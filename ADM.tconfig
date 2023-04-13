@@ -85,7 +85,7 @@
     <IsFTS>False</IsFTS>
     <ftsField />
     <ftsPattern />
-    <recNo>0</recNo>
+    <recNo>6</recNo>
     <findExpression />
     <evalTest />
     <defaultSettings>0</defaultSettings>
@@ -127,6 +127,21 @@
     <defaultSettings>0</defaultSettings>
     <selectedTab>0</selectedTab>
   </Table1>
+  <Table2>
+    <QueryColumn>SELECT * FROM Alerts WHERE Falla = 201 AND Status = 1 AND Inicio = '17:30:39'</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>SELECT * FROM Alerts WHERE Falla = 201 AND Status = 1</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>SELECT * FROM Alerts WHERE Falla = 201</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>SELECT * FROM Failures WHERE Alerts = 201</QueryColumn>
+  </Table2>
+  <Table2>
+    <QueryColumn>SELECT * FROM Failures WHERE Falla = 201</QueryColumn>
+  </Table2>
   <Table2>
     <QueryColumn>INSERT INTO Failures(Ide,Nombre,Area) VALUES (1,'Limpieza de maquinaria',1);
 INSERT INTO Failures(Ide,Nombre,Area) VALUES (2,'16.1 Cambio de pistones',1);
