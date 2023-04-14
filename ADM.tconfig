@@ -38,24 +38,6 @@
     </xs:element>
   </xs:schema>
   <Table1>
-    <TableName>FAILURES</TableName>
-    <IsFilter>False</IsFilter>
-    <Filter />
-    <IsScope>False</IsScope>
-    <ScopeLow />
-    <ScopeHigh />
-    <IndexName />
-    <FieldsOrder>0</FieldsOrder>
-    <IsFTS>False</IsFTS>
-    <ftsField />
-    <ftsPattern />
-    <recNo>0</recNo>
-    <findExpression />
-    <evalTest />
-    <defaultSettings>0</defaultSettings>
-    <selectedTab>0</selectedTab>
-  </Table1>
-  <Table1>
     <TableName>EMAILS</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
@@ -111,6 +93,24 @@
   </Table1>
   <Table1>
     <TableName>ALARMS</TableName>
+    <IsFilter>False</IsFilter>
+    <Filter />
+    <IsScope>False</IsScope>
+    <ScopeLow />
+    <ScopeHigh />
+    <IndexName />
+    <FieldsOrder>0</FieldsOrder>
+    <IsFTS>False</IsFTS>
+    <ftsField />
+    <ftsPattern />
+    <recNo>0</recNo>
+    <findExpression />
+    <evalTest />
+    <defaultSettings>0</defaultSettings>
+    <selectedTab>0</selectedTab>
+  </Table1>
+  <Table1>
+    <TableName>FAILURES</TableName>
     <IsFilter>False</IsFilter>
     <Filter />
     <IsScope>False</IsScope>
