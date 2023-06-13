@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS `alerts` (
   `Operator` smallint DEFAULT NULL,
   `OperatorAccepted` smallint DEFAULT NULL,
   `Supervisor` smallint DEFAULT NULL,
+  `SupervisorFinish` smallint DEFAULT NULL,
+  `Machine` tinyint DEFAULT NULL,
   `Failure` smallint DEFAULT NULL,
   `Status` tinyint DEFAULT NULL,
   `Start` time DEFAULT NULL,
@@ -30,14 +32,14 @@ CREATE TABLE IF NOT EXISTS `alerts` (
 
 -- Volcando datos para la tabla adm.alerts: ~7 rows (aproximadamente)
 DELETE FROM `alerts`;
-INSERT INTO `alerts` (`DateMark`, `Operator`, `OperatorAccepted`, `Supervisor`, `Failure`, `Status`, `Start`, `Response`, `Repair`) VALUES
-	('1682474258', NULL, NULL, NULL, 4, 1, '10:00:00', '00:00:00', '00:00:00'),
-	('1682475673', NULL, NULL, NULL, 17, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1682476647', NULL, NULL, NULL, 7, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1682477580', NULL, NULL, NULL, 12, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1685737289', 401, NULL, 0, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
-	('1685737424', 401, NULL, 1, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
-	('1685737681', 401, NULL, 3, 1, 4, '10:10:10', '11:11:11', '00:11:12');
+INSERT INTO `alerts` (`DateMark`, `Operator`, `OperatorAccepted`, `Supervisor`, `SupervisorFinish`, `Machine`, `Failure`, `Status`, `Start`, `Response`, `Repair`) VALUES
+	('1682474258', NULL, NULL, NULL, NULL, NULL, 4, 1, '10:00:00', '00:00:00', '00:00:00'),
+	('1682475673', NULL, NULL, NULL, NULL, NULL, 17, 1, '10:10:10', '00:00:00', '00:00:00'),
+	('1682476647', NULL, NULL, NULL, NULL, NULL, 7, 1, '10:10:10', '00:00:00', '00:00:00'),
+	('1682477580', NULL, NULL, NULL, NULL, NULL, 12, 1, '10:10:10', '00:00:00', '00:00:00'),
+	('1685737289', 401, NULL, 0, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
+	('1685737424', 401, NULL, 1, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
+	('1685737681', 401, NULL, 3, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12');
 
 -- Volcando estructura para tabla adm.areas
 CREATE TABLE IF NOT EXISTS `areas` (
@@ -195,6 +197,18 @@ INSERT INTO `failures` (`Ide`, `Name`, `Area`) VALUES
 	(232, 'Proceso de carga detenido x sobreproducción', 3),
 	(301, 'personal nuevo', 4),
 	(302, 'equipo', 4);
+
+-- Volcando estructura para tabla adm.machines
+CREATE TABLE IF NOT EXISTS `machines` (
+  `Ide` tinyint NOT NULL,
+  `Name` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`Ide`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+-- Volcando datos para la tabla adm.machines: ~1 rows (aproximadamente)
+DELETE FROM `machines`;
+INSERT INTO `machines` (`Ide`, `Name`) VALUES
+	(1, 'Llenadora');
 
 -- Volcando estructura para tabla adm.manufacturing
 CREATE TABLE IF NOT EXISTS `manufacturing` (
