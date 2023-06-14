@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versión del servidor:         8.0.33 - MySQL Community Server - GPL
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             12.4.0.6659
+-- HeidiSQL Versión:             12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -30,16 +30,25 @@ CREATE TABLE IF NOT EXISTS `alerts` (
   PRIMARY KEY (`DateMark`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.alerts: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla adm.alerts: ~16 rows (aproximadamente)
 DELETE FROM `alerts`;
 INSERT INTO `alerts` (`DateMark`, `Operator`, `OperatorAccepted`, `Supervisor`, `SupervisorFinish`, `Machine`, `Failure`, `Status`, `Start`, `Response`, `Repair`) VALUES
-	('1682474258', NULL, NULL, NULL, NULL, NULL, 4, 1, '10:00:00', '00:00:00', '00:00:00'),
-	('1682475673', NULL, NULL, NULL, NULL, NULL, 17, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1682476647', NULL, NULL, NULL, NULL, NULL, 7, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1682477580', NULL, NULL, NULL, NULL, NULL, 12, 1, '10:10:10', '00:00:00', '00:00:00'),
-	('1685737289', 401, NULL, 0, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
-	('1685737424', 401, NULL, 1, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12'),
-	('1685737681', 401, NULL, 3, NULL, NULL, 1, 4, '10:10:10', '11:11:11', '00:11:12');
+	('1686689794', 401, 401, 3, 3, 1, 10, 4, '14:53:56', '00:02:08', '00:00:11'),
+	('1686689828', 401, 401, 3, 3, 1, 11, 4, '14:53:56', '00:02:41', '00:00:08'),
+	('1686689859', 401, 401, 3, 3, 1, 4, 4, '14:53:55', '00:03:15', '00:00:00'),
+	('1686689928', 401, 401, 3, 3, 1, 8, 4, '14:53:56', '00:04:24', '00:00:09'),
+	('1686689960', 401, 401, 3, 3, 1, 7, 4, '14:53:54', '00:04:57', '00:00:11'),
+	('1686690004', 401, 401, 3, 3, 1, 6, 4, '14:53:54', '00:05:37', '00:00:15'),
+	('1686690051', 401, 401, 3, 3, 1, 3, 4, '14:53:54', '00:06:22', '00:00:15'),
+	('1686690100', 401, 401, 3, 3, 1, 5, 4, '14:53:53', '00:07:08', '00:00:20'),
+	('1686690132', 401, 401, 3, 3, 1, 2, 4, '14:53:53', '00:07:49', '00:00:11'),
+	('1686690163', 401, 401, 3, 3, 1, 1, 4, '14:53:53', '00:08:19', '00:00:13'),
+	('1686690829', 401, 401, 3, 3, 1, 1, 4, '15:04:29', '00:08:56', '00:00:05'),
+	('1686690846', 401, 401, 3, 3, 1, 2, 4, '15:04:29', '00:09:13', '00:00:06'),
+	('1686690860', 401, 401, 3, 3, 1, 5, 4, '15:04:30', '00:09:28', '00:00:05'),
+	('1686690878', 401, 401, 3, 3, 1, 6, 4, '15:04:30', '00:09:43', '00:00:06'),
+	('1686690897', 401, 401, 3, 3, 1, 3, 4, '15:04:30', '00:10:03', '00:00:05'),
+	('1686690913', 401, 401, 3, 3, 1, 7, 4, '15:04:32', '00:10:16', '00:00:06');
 
 -- Volcando estructura para tabla adm.areas
 CREATE TABLE IF NOT EXISTS `areas` (
@@ -68,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `emails` (
   PRIMARY KEY (`Ide`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.emails: ~24 rows (aproximadamente)
+-- Volcando datos para la tabla adm.emails: ~23 rows (aproximadamente)
 DELETE FROM `emails`;
 INSERT INTO `emails` (`Ide`, `Name`, `Area`, `Role`, `Level`, `Email`, `Rfid`) VALUES
 	('1675976415', 'Daniel Leija', 0, 'Desarrollador', 0, 'daniel.leija.condor@gmail.com', NULL),
@@ -201,7 +210,7 @@ INSERT INTO `failures` (`Ide`, `Name`, `Area`) VALUES
 -- Volcando estructura para tabla adm.machines
 CREATE TABLE IF NOT EXISTS `machines` (
   `Ide` tinyint NOT NULL,
-  `Name` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `Name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`Ide`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -212,7 +221,7 @@ INSERT INTO `machines` (`Ide`, `Name`) VALUES
 
 -- Volcando estructura para tabla adm.manufacturing
 CREATE TABLE IF NOT EXISTS `manufacturing` (
-  `WorkOrder` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `WorkOrder` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `ItemNumber` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `LotNumber` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `PlannedStartDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
@@ -232,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `operators` (
   PRIMARY KEY (`Ide`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.operators: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla adm.operators: ~3 rows (aproximadamente)
 DELETE FROM `operators`;
 INSERT INTO `operators` (`Ide`, `Name`, `Shift`) VALUES
 	(401, 'Operación Grupo A', 1),
@@ -242,7 +251,7 @@ INSERT INTO `operators` (`Ide`, `Name`, `Shift`) VALUES
 -- Volcando estructura para tabla adm.production
 CREATE TABLE IF NOT EXISTS `production` (
   `DateMark` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
-  `WorkOrder` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `WorkOrder` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `Machine` tinyint DEFAULT NULL,
   `Current` int DEFAULT NULL,
   `Good` int DEFAULT NULL,
