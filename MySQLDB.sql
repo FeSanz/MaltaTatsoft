@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `failures` (
   PRIMARY KEY (`Ide`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.failures: ~91 rows (aproximadamente)
+-- Volcando datos para la tabla adm.failures: ~105 rows (aproximadamente)
 DELETE FROM `failures`;
 INSERT INTO `failures` (`Ide`, `Name`, `Area`, `Type`) VALUES
 	(1, '12 Limpieza de maquinaria', 1, 'TMP'),
@@ -248,8 +248,8 @@ CREATE TABLE IF NOT EXISTS `manufacturing` (
 DELETE FROM `manufacturing`;
 INSERT INTO `manufacturing` (`WorkOrder`, `ItemNumber`, `LotNumber`, `Quantity`, `PlannedTime`, `PlannedStartDate`, `PlannedCompletionDate`) VALUES
 	('WO-002-1051', 'CM60010', '001', 2000, 240, '2023-06-20T09:00:00+00:00', '2023-06-20T13:00:00+00:00'),
-	('WO-002-1054', 'CM60010', '001', 2000, 240, '2023-06-20T13:00:00+00:00', '2023-06-20T17:00:00+00:00'),
-	('WO-002-1056', 'CM60010', '001', 2000, 240, '2023-06-20T17:00:00+00:00', '2023-06-20T21:00:00+00:00');
+	('WO-002-1052', 'CM60010', '001', 2000, 240, '2023-06-20T13:00:00+00:00', '2023-06-20T17:00:00+00:00'),
+	('WO-002-1053', 'CM60010', '001', 2000, 240, '2023-06-20T17:00:00+00:00', '2023-06-20T21:00:00+00:00');
 
 -- Volcando estructura para tabla adm.operators
 CREATE TABLE IF NOT EXISTS `operators` (
@@ -278,8 +278,21 @@ CREATE TABLE IF NOT EXISTS `production` (
   PRIMARY KEY (`DateMark`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.production: ~127 rows (aproximadamente)
+-- Volcando datos para la tabla adm.production: ~12 rows (aproximadamente)
 DELETE FROM `production`;
+INSERT INTO `production` (`DateMark`, `WorkOrder`, `Machine`, `Current`, `Good`, `Scrap`, `Stoppage`) VALUES
+	('1689606272000', 'WO-002-1051', 1, 400, 398, 2, 2),
+	('1689606272001', 'WO-002-1051', 1, 500, 489, 11, 2),
+	('1689606272002', 'WO-002-1051', 1, 10, 7, 3, 2),
+	('1689606272003', 'WO-002-1051', 1, 0, 0, 0, 3),
+	('1689606272004', 'WO-002-1052', 1, 450, 398, 52, 2),
+	('1689606272005', 'WO-002-1052', 1, 0, 0, 0, 1),
+	('1689606272006', 'WO-002-1052', 1, 350, 345, 5, 2),
+	('1689606272007', 'WO-002-1052', 1, 500, 498, 2, 2),
+	('1689606272008', 'WO-002-1053', 1, 400, 398, 2, 2),
+	('1689606272009', 'WO-002-1053', 1, 500, 489, 11, 2),
+	('1689606272010', 'WO-002-1053', 1, 350, 345, 5, 2),
+	('1689606272011', 'WO-002-1053', 1, 500, 498, 2, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
