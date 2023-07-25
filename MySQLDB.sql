@@ -275,24 +275,25 @@ CREATE TABLE IF NOT EXISTS `production` (
   `Good` int DEFAULT NULL,
   `Scrap` int DEFAULT NULL,
   `Stoppage` tinyint DEFAULT NULL,
+  `Stopflag` tinyint DEFAULT NULL,
   PRIMARY KEY (`DateMark`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- Volcando datos para la tabla adm.production: ~12 rows (aproximadamente)
 DELETE FROM `production`;
-INSERT INTO `production` (`DateMark`, `WorkOrder`, `Machine`, `Current`, `Good`, `Scrap`, `Stoppage`) VALUES
-	('1689606272000', 'WO-002-1051', 1, 400, 398, 2, 2),
-	('1689606272001', 'WO-002-1051', 1, 500, 489, 11, 2),
-	('1689606272002', 'WO-002-1051', 1, 10, 7, 3, 2),
-	('1689606272003', 'WO-002-1051', 1, 0, 0, 0, 3),
-	('1689606272004', 'WO-002-1052', 1, 450, 398, 52, 2),
-	('1689606272005', 'WO-002-1052', 1, 0, 0, 0, 1),
-	('1689606272006', 'WO-002-1052', 1, 350, 345, 5, 2),
-	('1689606272007', 'WO-002-1052', 1, 500, 498, 2, 2),
-	('1689606272008', 'WO-002-1053', 1, 400, 398, 2, 2),
-	('1689606272009', 'WO-002-1053', 1, 500, 489, 11, 2),
-	('1689606272010', 'WO-002-1053', 1, 350, 345, 5, 2),
-	('1689606272011', 'WO-002-1053', 1, 500, 498, 2, 1);
+INSERT INTO `production` (`DateMark`, `WorkOrder`, `Machine`, `Current`, `Good`, `Scrap`, `Stoppage`, `Stopflag`) VALUES
+	('1689606272000', 'WO-002-1051', 1, 9, 7, 2, 2, 0),
+	('1689606272001', 'WO-002-1051', 1, 10, 9, 1, 2, 0),
+	('1689606272002', 'WO-002-1051', 1, 11, 11, 0, 2, 0),
+	('1689606272003', 'WO-002-1051', 1, 0, 0, 0, 3, 0),
+	('1689732718000', 'WO-002-1052', 1, 8, 7, 1, 2, 0),
+	('1689732718001', 'WO-002-1052', 1, 0, 0, 0, 1, 1),
+	('1689732718002', 'WO-002-1052', 1, 9, 8, 1, 2, 0),
+	('1689732718003', 'WO-002-1052', 1, 10, 7, 3, 2, 0),
+	('1690885171000', 'WO-002-1053', 1, 10, 10, 0, 2, 0),
+	('1690885172000', 'WO-002-1053', 1, 11, 11, 0, 2, 0),
+	('1690949973000', 'WO-002-1053', 1, 10, 10, 0, 1, 0),
+	('1690949974000', 'WO-002-1053', 1, 11, 10, 1, 2, 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
