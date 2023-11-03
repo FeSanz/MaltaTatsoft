@@ -236,9 +236,10 @@ INSERT INTO `machines` (`Ide`, `Name`) VALUES
 CREATE TABLE IF NOT EXISTS `manufacturing` (
   `WorkOrder` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
   `ItemNumber` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `ItemDescription` varchar(100) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `LotNumber` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
-  `Quantity` int DEFAULT NULL,
-  `PlannedTime` mediumint DEFAULT NULL,
+  `PlannedQuantity` int DEFAULT NULL,
+  `CompletedQuantity` int DEFAULT NULL,
   `PlannedStartDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `PlannedCompletionDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`WorkOrder`)
@@ -246,10 +247,10 @@ CREATE TABLE IF NOT EXISTS `manufacturing` (
 
 -- Volcando datos para la tabla adm.manufacturing: ~3 rows (aproximadamente)
 DELETE FROM `manufacturing`;
-INSERT INTO `manufacturing` (`WorkOrder`, `ItemNumber`, `LotNumber`, `Quantity`, `PlannedTime`, `PlannedStartDate`, `PlannedCompletionDate`) VALUES
-	('WO-002-1051', 'CM60010', '001', 2000, 240, '2023-06-20T09:00:00+00:00', '2023-06-20T13:00:00+00:00'),
-	('WO-002-1052', 'CM60010', '001', 2000, 240, '2023-06-20T13:00:00+00:00', '2023-06-20T17:00:00+00:00'),
-	('WO-002-1053', 'CM60010', '001', 2000, 240, '2023-06-20T17:00:00+00:00', '2023-06-20T21:00:00+00:00');
+INSERT INTO `manufacturing` (`WorkOrder`, `ItemNumber`, `ItemDescription`, `LotNumber`, `PlannedQuantity`, `CompletedQuantity`, `PlannedStartDate`, `PlannedCompletionDate`) VALUES
+	('WO-002-1051', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T09:00:00+00:00', '2023-06-20T13:00:00+00:00'),
+	('WO-002-1052', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T13:00:00+00:00', '2023-06-20T17:00:00+00:00'),
+	('WO-002-1053', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T17:00:00+00:00', '2023-06-20T21:00:00+00:00');
 
 -- Volcando estructura para tabla adm.operators
 CREATE TABLE IF NOT EXISTS `operators` (
@@ -259,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `operators` (
   PRIMARY KEY (`Ide`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.operators: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla adm.operators: ~3 rows (aproximadamente)
 DELETE FROM `operators`;
 INSERT INTO `operators` (`Ide`, `Name`, `Shift`) VALUES
 	(401, 'Operación Grupo A', 1),
@@ -287,13 +288,13 @@ INSERT INTO `production` (`DateMark`, `WorkOrder`, `Machine`, `Current`, `Good`,
 	('1689606272002', 'WO-002-1051', 1, 11, 11, 0, 2, 0),
 	('1689606272003', 'WO-002-1051', 1, 0, 0, 0, 3, 0),
 	('1689732718000', 'WO-002-1052', 1, 8, 7, 1, 2, 0),
-	('1689732718001', 'WO-002-1052', 1, 0, 0, 0, 1, 1),
+	('1689732718001', 'WO-002-1052', 1, 0, 0, 0, 1, 2),
 	('1689732718002', 'WO-002-1052', 1, 9, 8, 1, 2, 0),
 	('1689732718003', 'WO-002-1052', 1, 10, 7, 3, 2, 0),
 	('1690885171000', 'WO-002-1053', 1, 10, 10, 0, 2, 0),
 	('1690885172000', 'WO-002-1053', 1, 11, 11, 0, 2, 0),
-	('1690949973000', 'WO-002-1053', 1, 10, 10, 0, 1, 0),
-	('1690949974000', 'WO-002-1053', 1, 11, 10, 1, 2, 0);
+	('1690949973000', 'WO-002-1053', 1, 10, 10, 0, 2, 0),
+	('1690949974000', '', 1, 11, 10, 1, 2, 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
