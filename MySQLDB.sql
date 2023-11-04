@@ -241,13 +241,13 @@ CREATE TABLE IF NOT EXISTS `manufacturing` (
   `PlannedQuantity` int DEFAULT NULL,
   `CompletedQuantity` int DEFAULT NULL,
   `PlannedStartDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
-  `PlannedCompletionDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `CompletionDate` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`WorkOrder`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- Volcando datos para la tabla adm.manufacturing: ~3 rows (aproximadamente)
 DELETE FROM `manufacturing`;
-INSERT INTO `manufacturing` (`WorkOrder`, `ItemNumber`, `ItemDescription`, `LotNumber`, `PlannedQuantity`, `CompletedQuantity`, `PlannedStartDate`, `PlannedCompletionDate`) VALUES
+INSERT INTO `manufacturing` (`WorkOrder`, `ItemNumber`, `ItemDescription`, `LotNumber`, `PlannedQuantity`, `CompletedQuantity`, `PlannedStartDate`, `CompletionDate`) VALUES
 	('WO-002-1051', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T09:00:00+00:00', '2023-06-20T13:00:00+00:00'),
 	('WO-002-1052', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T13:00:00+00:00', '2023-06-20T17:00:00+00:00'),
 	('WO-002-1053', 'CM60010', NULL, '001', 2000, NULL, '2023-06-20T17:00:00+00:00', '2023-06-20T21:00:00+00:00');
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `operators` (
   PRIMARY KEY (`Ide`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
--- Volcando datos para la tabla adm.operators: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla adm.operators: ~2 rows (aproximadamente)
 DELETE FROM `operators`;
 INSERT INTO `operators` (`Ide`, `Name`, `Shift`) VALUES
 	(401, 'Operación Grupo A', 1),
@@ -294,7 +294,59 @@ INSERT INTO `production` (`DateMark`, `WorkOrder`, `Machine`, `Current`, `Good`,
 	('1690885171000', 'WO-002-1053', 1, 10, 10, 0, 2, 0),
 	('1690885172000', 'WO-002-1053', 1, 11, 11, 0, 2, 0),
 	('1690949973000', 'WO-002-1053', 1, 10, 10, 0, 2, 0),
-	('1690949974000', '', 1, 11, 10, 1, 2, 0);
+	('1690949974000', '', 1, 11, 10, 1, 2, 0),
+	('1699053539686', '', 1, 0, 0, 0, 0, 0),
+	('1699056892399', '', 1, 0, 0, 0, 0, 0),
+	('1699056952399', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057012410', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057072416', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057132435', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057192446', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057252450', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057312451', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057372465', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057432470', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057492473', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057552481', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057612487', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057672493', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057732503', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057792508', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057852509', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057912515', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699057972523', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058032538', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058092543', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058152543', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058212552', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058272567', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058332570', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058392571', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058452574', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058512582', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058572587', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058632598', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058692613', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058752618', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058812624', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058872628', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058932642', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699058992654', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059052666', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059112680', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059172688', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059232693', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059292708', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059352720', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059412732', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059472738', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059532738', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059592753', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059652757', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059712767', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059772770', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059832778', 'TEX_OT131548', 1, 0, 0, 0, 0, 0),
+	('1699059892788', 'TEX_OT131548', 1, 0, 0, 0, 0, 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
