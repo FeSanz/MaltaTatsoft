@@ -284,6 +284,20 @@ CREATE TABLE IF NOT EXISTS `production` (
 -- Volcando datos para la tabla adm.production: ~0 rows (aproximadamente)
 DELETE FROM `production`;
 
+-- Volcando estructura para tabla adm.weighing
+CREATE TABLE IF NOT EXISTS `weighing` (
+  `DateMark` varchar(13) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `WorkOrder` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `IdealWeight` float NOT NULL DEFAULT (0),
+  `RealWeight` float NOT NULL DEFAULT (0),
+  PRIMARY KEY (`DateMark`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+-- Volcando datos para la tabla adm.weighing: ~0 rows (aproximadamente)
+DELETE FROM `weighing`;
+INSERT INTO `weighing` (`DateMark`, `WorkOrder`, `IdealWeight`, `RealWeight`) VALUES
+	('1700075449000', 'TEX_OT131548', 12.78, 118.12);
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
